@@ -782,6 +782,7 @@ img { max-width: 100%; display: block; }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 32px;
+  align-items: start;
 }
 
 .project-card {
