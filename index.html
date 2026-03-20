@@ -1,630 +1,820 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pranit Gourav Sahoo | Portfolio</title>
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  
-  <!-- SVG Doodle Background as Base64 -->
-  <style>
-    .doodle-bg {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; opacity: 0.06;
-      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.83v58.34h-58.34l-.83-.83v-58.34h58.34zm-52.924 53.5l45.42-45.42-2.12-2.12-45.42 45.42 2.12 2.12zm45.42-51.38l-45.42 45.42 2.12 2.12 45.42-45.42-2.12-2.12z' fill='%2300C9B1' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
-    }
-  </style>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pranit Gourav Sahoo – Data Analyst | Business Intelligence | SQL & Python. Portfolio showcasing data engineering, NLP, and backend development projects." />
+  <title>Pranit Gourav Sahoo | Data Analyst Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Tech Doodle BG -->
-  <div class="doodle-bg"></div>
-
-  <!-- NAVBAR -->
-  <nav class="navbar">
+  <!-- ─── NAVIGATION ─────────────────────────────── -->
+  <nav id="navbar" class="navbar">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">PGS<span>.</span></a>
-      <div class="nav-links">
-        <a href="#hero" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#training">Training</a>
-        <a href="#certs">Certifications</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <button class="hamburger">
+      <a href="#home" class="nav-logo">PGS<span class="accent">.</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#training">Training</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section id="hero" class="hero">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <div class="hero-badge">Creative UI Designer & Tech Specialist</div>
-        <h1 class="hero-name">PRANIT <span class="line2">GOURAV SAHOO</span></h1>
-        <h2 class="hero-role">Analyst | GenAI Specialist | Developer</h2>
-        <p class="hero-tagline">
-          I craft robust analytical systems, advanced GenAI pipelines, and highly modern, interactive user interfaces to bridge complex data with human-centered design.
-        </p>
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="pranit full cv.pdf" download class="btn btn-ghost">
-            Download CV
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-          </a>
-        </div>
-        <div class="hero-socials">
-          <a href="https://github.com/pranitarin05" class="hero-social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.087-.744.084-.73.084-.73 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.627-5.373-12-12-12"/></svg></a>
-          <a href="https://linkedin.com/in/pranit-gourav-sahoo-b61516244" class="hero-social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2.01 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zM20.45 20.45h-3.56v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96v5.7H9.31V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z"/></svg></a>
-          <a href="mailto:pranitgouravsahoo@gmail.com" class="hero-social-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zM22 6l-10 7L2 6"></path></svg></a>
-        </div>
-      </div>
-      <div class="hero-illustration">
-        <svg viewBox="0 0 400 300" fill="none">
-          <circle cx="200" cy="150" r="120" fill="var(--bg-card)" stroke="var(--accent)" stroke-width="2" stroke-dasharray="10 10" />
-          <path d="M150 120 L250 120 L250 200 L150 200 Z" fill="var(--bg-input)" stroke="var(--accent)" stroke-width="3" />
-          <path d="M170 140 L230 140" stroke="var(--text-primary)" stroke-width="4" stroke-linecap="round" />
-          <path d="M170 160 L210 160" stroke="var(--accent)" stroke-width="4" stroke-linecap="round" />
-          <path d="M170 180 L220 180" stroke="var(--text-secondary)" stroke-width="4" stroke-linecap="round" />
-          <circle cx="150" cy="120" r="6" fill="var(--accent)" />
-          <circle cx="250" cy="120" r="6" fill="var(--accent)" />
-          <circle cx="150" cy="200" r="6" fill="var(--accent)" />
-          <circle cx="250" cy="200" r="6" fill="var(--accent)" />
-        </svg>
+  <!-- ─── ABOUT (Hero) ────────────────────────── -->
+  <section id="about" class="hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="cursor-glow" id="cursor-glow"></div>
+    <div class="hero-content">
+      <h1 class="hero-name">
+        <span class="hero-word" style="--wi:0">Pranit</span>
+        <span class="hero-word" style="--wi:1">Gourav</span>
+        <br />
+        <span class="hero-word hero-word-glow" style="--wi:2">Sahoo</span>
+      </h1>
+      <p class="hero-title hero-anim-blur">Data Analyst&nbsp;|&nbsp;Business Intelligence&nbsp;|&nbsp;SQL &amp; Python</p>
+      <p class="hero-tagline hero-anim-up">
+        <span id="typing-target"></span><span class="typing-cursor">|</span>
+      </p>
+      <div class="hero-cta hero-anim-cta">
+        <a href="#projects" class="btn btn-primary ripple-btn" id="cta-projects">View Projects</a>
+        <a href="pranit perfect cv.pdf" class="btn btn-secondary ripple-btn" id="cta-resume" download>Download Resume</a>
+        <a href="#contact" class="btn btn-ghost ripple-btn" id="cta-contact">Contact Me</a>
       </div>
     </div>
-    <div class="scroll-hint">
-      Scroll
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="about-section section-pad">
-    <div class="container about-inner reveal">
-      <div class="about-text">
-        <div class="section-tag">About Me</div>
-        <h2 class="section-heading">About <span class="teal">me</span><span class="typing-cursor">_</span></h2>
-        <p class="about-lead">
-          I'm Pranit Gourav Sahoo, a tech enthusiast specializing in Data Analytics, Generative AI, and full-stack development. I build intelligent systems that solve real-world problems.
-        </p>
-        <div class="about-stats">
-          <div class="about-stat">
-            <span class="about-stat-num">4+</span>
-            <span class="about-stat-label">Major Projects</span>
-          </div>
-          <div class="about-stat">
-            <span class="about-stat-num">50+</span>
-            <span class="about-stat-label">Technologies</span>
-          </div>
-        </div>
-        <div class="about-pillars">
-          <div class="pillar">
-            <div class="pillar-icon teal">💻</div>
-            <div>
-              <h4>Development</h4>
-              <p>Full-stack scalable architectures</p>
-            </div>
-          </div>
-          <div class="pillar">
-            <div class="pillar-icon teal">🤖</div>
-            <div>
-              <h4>AI / ML</h4>
-              <p>RAG pipelines & LLM integrations</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="about-illustration">
-        <svg viewBox="0 0 200 200" fill="none">
-          <rect x="40" y="40" width="120" height="120" rx="20" fill="var(--accent-dim)" stroke="var(--accent)" stroke-width="4" />
-          <path d="M70 100 L95 125 L135 75" stroke="var(--accent)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
+    <div class="hero-scroll-hint">
+      <span class="scroll-label">Scroll</span>
+      <div class="scroll-chevrons">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="skills-section section-pad">
-    <div class="container reveal">
-      <div class="section-tag">Core Capabilities</div>
-      <h2 class="section-heading">Technical <span class="teal">Skills</span></h2>
-      <p class="section-sub">A diverse tech stack tailored for end-to-end intelligent application development.</p>
+  <!-- ─── SKILLS ─────────────────────────────────── -->
+  <section id="skills" class="about section-pad">
+    <div class="container">
+      <div class="section-label">/ Skills &amp; Capabilities</div>
+      <h2 class="section-title">Turning Data Into <span class="gradient-text">Decisions</span></h2>
+      <div class="skills-intro">
+        <p class="about-lead text-center">
+          I'm a data analyst who believes the best analysis is the one that gets acted on.
+          My work bridges the gap between raw data and board-room decisions — through 
+          rigorous cleaning, statistical reasoning, and clear, stakeholder-friendly communication.
+        </p>
 
-      <div class="ts-grid">
-        <!-- Programming -->
-        <div class="ts-card hover-glow">
-          <div class="ts-card-header">
-            <svg class="ts-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
-            <h4>Programming</h4>
+        <div class="stat-cards center-stats">
+          <div class="stat-card">
+            <span class="stat-num">4+</span>
+            <span class="stat-label">Projects</span>
           </div>
-          <div class="ts-tags">
-            <span class="ts-tag">Python (OOP, Advanced)</span>
-            <span class="ts-tag">C++ (Data Structures)</span>
-            <span class="ts-tag">SQL</span>
-            <span class="ts-tag">R</span>
-            <span class="ts-tag">JavaScript / HTML / CSS</span>
+          <div class="stat-card">
+            <span class="stat-num">85–90%</span>
+            <span class="stat-label">Accuracy Achieved</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">70%+</span>
+            <span class="stat-label">Manual Effort Reduced</span>
           </div>
         </div>
+
+        <div class="about-pillars grid-4">
+          <div class="pillar">
+            <div class="pillar-icon">⚙️</div>
+            <div>
+              <h4>Automation-First Mindset</h4>
+              <p>I build reusable pipelines so teams spend time on insight, not cleaning.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">📐</div>
+            <div>
+              <h4>Statistical Rigor</h4>
+              <p>From IQR filtering to TF-IDF scoring — technique with justification.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🗣️</div>
+            <div>
+              <h4>Business Translation</h4>
+              <p>I package findings into narratives that stakeholders understand.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🔬</div>
+            <div>
+              <h4>Experimentation Mindset</h4>
+              <p>Hypothesis → test → iterate. Validating every analytical conclusion.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEW TECHNICAL SKILLS SCETION -->
+      <div class="technical-skills-section">
+        <h2 class="ts-title">Technical Skills</h2>
+        <p class="ts-subtitle">A comprehensive overview of my technical capabilities and tools used for data analysis and development.</p>
         
-        <!-- Big Data -->
-        <div class="ts-card hover-glow">
-          <div class="ts-card-header">
-            <svg class="ts-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-            <h4>Big Data & Analytics</h4>
+        <div class="ts-grid">
+          <div class="ts-card">
+            <div class="ts-card-header">
+              <svg class="ts-icon" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="8" y2="16"></line><line x1="16" y1="10" x2="16" y2="16"></line></svg>
+              <h4>Data Analysis</h4>
+            </div>
+            <div class="ts-tags">
+              <span class="ts-tag">Statistical Analysis</span>
+              <span class="ts-tag">Data Cleaning</span>
+              <span class="ts-tag">Data Validation</span>
+              <span class="ts-tag">EDA</span>
+            </div>
           </div>
-          <div class="ts-tags">
-            <span class="ts-tag">Apache Spark (PySpark)</span>
-            <span class="ts-tag">Pandas</span><span class="ts-tag">NumPy</span><span class="ts-tag">Polars</span>
-            <span class="ts-tag">Power BI</span><span class="ts-tag">Snowflake</span>
+          <div class="ts-card">
+            <div class="ts-card-header">
+              <svg class="ts-icon" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              <h4>Technical Tools</h4>
+            </div>
+            <div class="ts-tags">
+              <span class="ts-tag">MySQL</span>
+              <span class="ts-tag">PostgreSQL</span>
+              <span class="ts-tag">SQLite</span>
+              <span class="ts-tag">Excel (Pivot, VLOOKUP, Dashboard)</span>
+              <span class="ts-tag">Tableau</span>
+              <span class="ts-tag">Power BI</span>
+            </div>
           </div>
-        </div>
-
-        <!-- GenAI -->
-        <div class="ts-card hover-glow">
-          <div class="ts-card-header">
-            <svg class="ts-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            <h4>GenAI & Machine Learning</h4>
+          <div class="ts-card">
+            <div class="ts-card-header">
+              <svg class="ts-icon" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <h4>Machine Learning</h4>
+            </div>
+            <div class="ts-tags">
+              <span class="ts-tag">Regression</span>
+              <span class="ts-tag">Classification</span>
+              <span class="ts-tag">Model Building</span>
+              <span class="ts-tag">Predictive Analytics</span>
+            </div>
           </div>
-          <div class="ts-tags">
-            <span class="ts-tag">LangChain</span><span class="ts-tag">LlamaIndex</span>
-            <span class="ts-tag">RAG Pipelines</span><span class="ts-tag">OpenAI Custom ChatGPT</span>
-            <span class="ts-tag">HuggingFace Spaces</span>
+          <div class="ts-card">
+            <div class="ts-card-header">
+              <svg class="ts-icon" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              <h4>Programming</h4>
+            </div>
+            <div class="ts-tags">
+              <span class="ts-tag">C</span>
+              <span class="ts-tag">C++</span>
+              <span class="ts-tag">Python</span>
+              <span class="ts-tag">Java</span>
+              <span class="ts-tag">JavaScript</span>
+              <span class="ts-tag">HTML</span>
+              <span class="ts-tag">CSS</span>
+            </div>
           </div>
-        </div>
-
-        <!-- MLOps -->
-        <div class="ts-card hover-glow">
-          <div class="ts-card-header">
-            <svg class="ts-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            <h4>MLOps & Dev Tools</h4>
+          <div class="ts-card">
+            <div class="ts-card-header">
+              <svg class="ts-icon" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              <h4>Other Skills</h4>
+            </div>
+            <div class="ts-tags">
+              <span class="ts-tag">Data Visualization</span>
+              <span class="ts-tag">DSA</span>
+              <span class="ts-tag">Git / GitHub</span>
+            </div>
           </div>
-          <div class="ts-tags">
-            <span class="ts-tag">Git/GitHub</span><span class="ts-tag">Docker</span>
-            <span class="ts-tag">Streamlit</span><span class="ts-tag">FastAPI</span><span class="ts-tag">MLflow</span>
+          <div class="ts-card">
+            <div class="ts-card-header">
+              <svg class="ts-icon" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              <h4>Frameworks &amp; Libraries</h4>
+            </div>
+            <div class="ts-tags">
+              <span class="ts-tag">Pandas</span>
+              <span class="ts-tag">NumPy</span>
+              <span class="ts-tag">Scikit-Learn</span>
+              <span class="ts-tag">NLTK</span>
+              <span class="ts-tag">Django</span>
+              <span class="ts-tag">Django REST</span>
+              <span class="ts-tag">React</span>
+            </div>
+          </div>
+          <div class="ts-card">
+            <div class="ts-card-header">
+              <svg class="ts-icon" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              <h4>Soft Skills</h4>
+            </div>
+            <div class="ts-tags">
+              <span class="ts-tag">Problem-Solving</span>
+              <span class="ts-tag">Fast Learner</span>
+              <span class="ts-tag">Leadership</span>
+              <span class="ts-tag">Adaptability</span>
+              <span class="ts-tag">Attention to Detail</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="projects-section section-pad">
-    <div class="container reveal">
-      <div class="section-tag">Case Studies</div>
-      <h2 class="section-heading">My recent <span class="teal">works</span></h2>
-      <p class="section-sub">End-to-end applications demonstrating business problem solving and modern deployment.</p>
-
-      <div class="filter-tabs">
-        <button class="filter-tab active" data-filter="all">All Projects</button>
-        <button class="filter-tab" data-filter="ai">AI / NLP</button>
-        <button class="filter-tab" data-filter="web">Full-Stack Web</button>
-        <button class="filter-tab" data-filter="data">Data Eng & ETL</button>
-      </div>
+  <!-- ─── PROJECTS ──────────────────────────────── -->
+  <!-- ─── PROJECTS ──────────────────────────────── -->
+  <section id="projects" class="projects section-pad">
+    <div class="container">
+      <div class="section-label">/ Case Studies &amp; Impact</div>
+      <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      <p class="section-sub">End-to-end analytical projects demonstrating business problem solving, ML model deployment, and data-driven insight generation.</p>
 
       <div class="projects-grid">
-        
-        <!-- Project 1: Resume Screener -->
-        <div class="project-card" data-category="ai web">
+
+        <!-- PROJECT 1: OCMS -->
+        <article class="project-card" id="project-ocms">
           <div class="project-cover">
-            <img src="resume-screenshot.png" alt="Resume Screener">
+            <img src="ocms-screenshot.png" alt="" />
           </div>
-          <div class="project-body">
-            <div class="project-tags-row">
-              <span class="tag tag-teal">LLM System</span>
-              <span class="tag tag-purple">NLP</span>
+          <div class="project-overview">
+            <h3 class="project-title"><span class="project-icon">🎓</span> Online Course Management System</h3>
+            <p class="project-desc">A comprehensive enterprise-grade platform for online education enabling course creation, student enrollment tracking, and interactive dashboards.</p>
+            <div class="project-tags">
+              <span class="tag tag-teal">Django</span>
+              <span class="tag tag-blue">React</span>
+              <span class="tag tag-purple">PostgreSQL</span>
+              <span class="tag tag-green">REST API</span>
             </div>
-            <h3 class="project-title"><span class="project-icon">📄</span> Resume Match Pro</h3>
-            <p class="project-desc">A scalable NLP engine evaluating multi-format resumes against job descriptions contextually.</p>
-            <button class="btn-see-more">See Details</button>
+            <button class="btn-see-more">See More ➔</button>
           </div>
           <div class="project-details">
             <div class="case-study-grid">
               <div class="case-block">
-                <h4><span class="case-icon">⚡</span> Architecture</h4>
-                <ul><li>PyPDF2 Text Extraction</li><li>spaCy NER Model</li><li>TF-IDF Vectorization</li></ul>
+                <h4><span class="case-icon">🎯</span> Business Problem</h4>
+                <p>Educational institutions lack an integrated, scalable platform to create courses, manage student enrollments, and track feedback — leading to scattered resources and poor user experience.</p>
               </div>
               <div class="case-block">
-                <h4><span class="case-icon">🚀</span> Flow</h4>
+                <h4><span class="case-icon">🗄️</span> Data</h4>
+                <ul>
+                  <li><strong>Entities:</strong> Users, Courses, Modules, Enrollments</li>
+                  <li><strong>Storage:</strong> PostgreSQL via Django ORM</li>
+                  <li><strong>Operations:</strong> Role-based CRUD, filtering, secure auth</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h4><span class="case-icon">🔬</span> Methodology</h4>
                 <div class="flow-steps">
-                  <span class="flow-step">Upload</span><span class="flow-arrow">→</span>
-                  <span class="flow-step">Parse</span><span class="flow-arrow">→</span>
-                  <span class="flow-step">Match</span>
+                  <div class="flow-step">Django API</div><div class="flow-arrow">→</div><div class="flow-step">JWT Auth</div><div class="flow-arrow">→</div><div class="flow-step">React UI</div><div class="flow-arrow">→</div><div class="flow-step">PostDB</div>
                 </div>
+                <ul>
+                  <li>RESTful endpoints using Django REST Framework</li>
+                  <li>JWT-based token authentication for secure access</li>
+                  <li>Responsive frontend built with React &amp; Tailwind</li>
+                  <li>Interactive dashboard for enrollment tracking</li>
+                </ul>
               </div>
-              <div class="case-block impact-block">
-                <h4><span class="case-icon">📈</span> Impact</h4>
-                <div class="impact-metrics">
-                  <div class="metric"><span class="metric-num">20x</span><span class="metric-desc">Faster Screening</span></div>
-                  <div class="metric"><span class="metric-num">95%</span><span class="metric-desc">Term Accuracy</span></div>
-                </div>
-                <p class="impact-note">Reduced HR workload dramatically.</p>
-              </div>
-            </div>
-            <a href="https://github.com/pranitarin05" class="project-link">View Repository</a>
-          </div>
-        </div>
-
-        <!-- Project 2: OCMS -->
-        <div class="project-card" data-category="web">
-          <div class="project-cover">
-            <img src="ocms-screenshot.png" alt="OCMS">
-          </div>
-          <div class="project-body">
-            <div class="project-tags-row">
-              <span class="tag tag-blue">Django</span>
-              <span class="tag tag-orange">React</span>
-            </div>
-            <h3 class="project-title"><span class="project-icon">🎓</span> OCMS Platform</h3>
-            <p class="project-desc">High-performance e-learning architecture delivering personalized student pathways.</p>
-            <button class="btn-see-more">See Details</button>
-          </div>
-          <div class="project-details">
-            <div class="case-study-grid">
               <div class="case-block">
-                <h4><span class="case-icon">⚡</span> Tools</h4>
+                <h4><span class="case-icon">🛠️</span> Tools</h4>
                 <div class="tools-list">
-                  <span class="tool-badge">Python</span><span class="tool-badge">Django</span><span class="tool-badge">SQL</span>
+                  <span class="tool-badge">Python</span><span class="tool-badge">Django REST</span><span class="tool-badge">React &amp; Vite</span><span class="tool-badge">PostgreSQL</span><span class="tool-badge">Tailwind</span>
                 </div>
               </div>
               <div class="case-block impact-block">
-                <h4><span class="case-icon">📈</span> Metrics</h4>
+                <h4><span class="case-icon">📊</span> Business Impact</h4>
                 <div class="impact-metrics">
-                  <div class="metric"><span class="metric-num">REST</span><span class="metric-desc">API Architecture</span></div>
+                  <div class="metric"><span class="metric-num">Scalable</span><span class="metric-desc">Enterprise platform</span></div>
+                  <div class="metric"><span class="metric-num">Secure</span><span class="metric-desc">JWT Auth</span></div>
+                  <div class="metric"><span class="metric-num">Streamlined</span><span class="metric-desc">Interactive UI</span></div>
                 </div>
-                <p class="impact-note">Built for concurrency.</p>
+                <p class="impact-note">Delivers a complete, unified solution for online education, removing ad-hoc tools and providing a seamless learning and teaching experience.</p>
               </div>
             </div>
-            <a href="https://github.com/pranitarin05" class="project-link">View Repository</a>
-          </div>
-        </div>
-
-        <!-- Project 3: IT Ticketing -->
-        <div class="project-card" data-category="web">
-          <div class="project-cover">
-            <img src="ticket-screenshot.png" alt="IT Ticketing">
-          </div>
-          <div class="project-body">
-            <div class="project-tags-row">
-              <span class="tag tag-blue">Django</span>
-              <span class="tag tag-green">API</span>
+            <div class="project-links mt-3">
+              <a href="https://github.com/pranitarin05" target="_blank" class="project-link">View on GitHub</a>
             </div>
-            <h3 class="project-title"><span class="project-icon">🎫</span> SmartCampus Ticketing</h3>
-            <p class="project-desc">Real-time IT support ticket management API allowing immediate resolution tracking.</p>
-            <button class="btn-see-more">See Details</button>
+          </div>
+        </article>
+
+        <!-- PROJECT 2: ETL PIPELINE -->
+        <article class="project-card" id="project-etl">
+          <div class="project-cover">
+            <img src="etl-screenshot.png" alt="" />
+          </div>
+          <div class="project-overview">
+            <h3 class="project-title"><span class="project-icon">⚙️</span> Automated ETL &amp; Data Cleaning Pipeline</h3>
+            <p class="project-desc">An end-to-end automated ETL pipeline engineered to extract, standardize, and clean multi-format datasets for downstream analytics and ML workflows.</p>
+            <div class="project-tags">
+              <span class="tag tag-blue">Python</span>
+              <span class="tag tag-teal">Pandas</span>
+              <span class="tag tag-orange">NumPy</span>
+              <span class="tag tag-purple">Scikit-Learn</span>
+            </div>
+            <button class="btn-see-more">See More ➔</button>
           </div>
           <div class="project-details">
             <div class="case-study-grid">
               <div class="case-block">
-                <h4><span class="case-icon">⚡</span> Auth & Roles</h4>
-                <ul><li>JWT Authentication</li><li>Role-based access</li></ul>
+                <h4><span class="case-icon">🎯</span> Business Problem</h4>
+                <p>Analytics and ML teams were spending the majority of their time on repetitive data wrangling across inconsistently formatted datasets — blocking insight generation and delaying model development.</p>
+              </div>
+              <div class="case-block">
+                <h4><span class="case-icon">🗄️</span> Data</h4>
+                <ul>
+                  <li><strong>Formats:</strong> CSV, Excel, JSON, TXT, Parquet</li>
+                  <li><strong>Volume:</strong> 10,000+ records per execution</li>
+                  <li><strong>Challenges:</strong> Nulls, duplicates, outliers, inconsistent types</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h4><span class="case-icon">🔬</span> Methodology</h4>
+                <div class="flow-steps">
+                  <div class="flow-step">Extract</div><div class="flow-arrow">→</div><div class="flow-step">Clean</div><div class="flow-arrow">→</div><div class="flow-step">Transform</div><div class="flow-arrow">→</div><div class="flow-step">Load</div>
+                </div>
+                <ul>
+                  <li>Multi-format extraction with unified schema handling</li>
+                  <li>Null imputation via median/mode</li>
+                  <li>IQR-based outlier detection and removal</li>
+                  <li>Label encoding + StandardScaler normalization</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h4><span class="case-icon">🛠️</span> Tools</h4>
+                <div class="tools-list">
+                  <span class="tool-badge">Python</span><span class="tool-badge">Pandas</span><span class="tool-badge">NumPy</span><span class="tool-badge">Scikit-Learn</span><span class="tool-badge">Logging</span>
+                </div>
               </div>
               <div class="case-block impact-block">
-                <h4><span class="case-icon">📈</span> Impact</h4>
+                <h4><span class="case-icon">📊</span> Business Impact</h4>
                 <div class="impact-metrics">
-                  <div class="metric"><span class="metric-num">CRUD</span><span class="metric-desc">Seamless API</span></div>
+                  <div class="metric"><span class="metric-num">85–90%</span><span class="metric-desc">Quality improvement</span></div>
+                  <div class="metric"><span class="metric-num">70%+</span><span class="metric-desc">Manual effort eliminated</span></div>
+                  <div class="metric"><span class="metric-num">30–40%</span><span class="metric-desc">Noisy records removed</span></div>
                 </div>
-                <p class="impact-note">Deployed on Vercel backend.</p>
+                <p class="impact-note">The modular, reusable architecture reduces onboarding time for new datasets and scales seamlessly to larger volumes — directly accelerating time-to-insight.</p>
               </div>
             </div>
-            <a href="https://github.com/pranitarin05" class="project-link">View Repository</a>
-          </div>
-        </div>
-
-        <!-- Project 4: ETL Pipeline -->
-        <div class="project-card" data-category="data">
-          <div class="project-cover">
-            <img src="etl-screenshot.png" alt="ETL Pipeline">
-          </div>
-          <div class="project-body">
-            <div class="project-tags-row">
-              <span class="tag tag-blue">Pandas</span>
-              <span class="tag tag-purple">Docker</span>
+            <div class="project-links mt-3">
+              <a href="https://github.com/pranitarin05" target="_blank" class="project-link">View on GitHub</a>
             </div>
-            <h3 class="project-title"><span class="project-icon">🔄</span> Auto-ETL Platform</h3>
-            <p class="project-desc">A containerized pipeline to automatically clean, impute, and encode raw CSV datasets seamlessly.</p>
-            <button class="btn-see-more">See Details</button>
+          </div>
+        </article>
+
+        <!-- PROJECT 3: TICKET PLATFORM -->
+        <article class="project-card" id="project-ticket">
+          <div class="project-cover">
+            <img src="ticket-screenshot.png" alt="" />
+          </div>
+          <div class="project-overview">
+            <h3 class="project-title"><span class="project-icon">🎫</span> Smart Campus Ticket Raising Platform</h3>
+            <p class="project-desc">A structured, trackable REST API backend designed for resolving student and staff complaints/service requests across campus operations.</p>
+            <div class="project-tags">
+              <span class="tag tag-red">REST API</span>
+              <span class="tag tag-teal">Django DRF</span>
+              <span class="tag tag-purple">SQLite</span>
+              <span class="tag tag-blue">JWT Auth</span>
+            </div>
+            <button class="btn-see-more">See More ➔</button>
           </div>
           <div class="project-details">
             <div class="case-study-grid">
               <div class="case-block">
-                <h4><span class="case-icon">⚡</span> Features</h4>
-                <ul><li>Missing value imputation</li><li>Categorical encoding</li></ul>
+                <h4><span class="case-icon">🎯</span> Business Problem</h4>
+                <p>Campus operational teams lacked a structured, trackable system for managing student and staff complaints and service requests — leading to lost tickets, unclear accountability, and slow resolution times.</p>
               </div>
-              <div class="case-block impact-block">
-                <h4><span class="case-icon">📈</span> Architecture</h4>
-                <div class="impact-metrics">
-                  <div class="metric"><span class="metric-num">Docker</span><span class="metric-desc">Containerized</span></div>
-                  <div class="metric"><span class="metric-num">FastAPI</span><span class="metric-desc">REST Layer</span></div>
+              <div class="case-block">
+                <h4><span class="case-icon">🗄️</span> Data</h4>
+                <ul>
+                  <li><strong>Entities:</strong> Tickets with title, description, category, priority</li>
+                  <li><strong>Storage:</strong> SQLite / relational DB via Django ORM</li>
+                  <li><strong>Operations:</strong> Full CRUD + filtering, search, ordering, pagination</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h4><span class="case-icon">🔬</span> Methodology</h4>
+                <div class="flow-steps">
+                  <div class="flow-step">Model</div><div class="flow-arrow">→</div><div class="flow-step">Serialize</div><div class="flow-arrow">→</div><div class="flow-step">API</div><div class="flow-arrow">→</div><div class="flow-step">Auth</div>
+                </div>
+                <ul>
+                  <li>Django ORM data model for tickets</li>
+                  <li>DRF serializers for JSON input/output validation</li>
+                  <li>RESTful endpoints: list, create, retrieve, update, delete</li>
+                  <li>JWT-based authentication with permission gates</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h4><span class="case-icon">🛠️</span> Tools</h4>
+                <div class="tools-list">
+                  <span class="tool-badge">Python</span><span class="tool-badge">Django</span><span class="tool-badge">DRF</span><span class="tool-badge">SQLite</span><span class="tool-badge">JWT</span>
                 </div>
               </div>
+              <div class="case-block impact-block">
+                <h4><span class="case-icon">📊</span> Business Impact</h4>
+                <div class="impact-metrics">
+                  <div class="metric"><span class="metric-num">100%</span><span class="metric-desc">Ticket traceability</span></div>
+                  <div class="metric"><span class="metric-num">Structured</span><span class="metric-desc">Searchable DB</span></div>
+                  <div class="metric"><span class="metric-num">Secure</span><span class="metric-desc">Role-based Auth</span></div>
+                </div>
+                <p class="impact-note">Replaces ad-hoc email/WhatsApp chains with a structured REST API — enabling data-driven analysis of response patterns and priority distributions.</p>
+              </div>
             </div>
-            <a href="https://github.com/pranitarin05" class="project-link">View Repository</a>
+            <div class="project-links mt-3">
+              <a href="https://github.com/pranitarin05" target="_blank" class="project-link">View on GitHub</a>
+            </div>
           </div>
-        </div>
+        </article>
+
+        <!-- PROJECT 4: RESUME SCREENING -->
+        <article class="project-card" id="project-resume">
+          <div class="project-cover">
+            <img src="resume-screenshot.png" alt="" />
+          </div>
+          <div class="project-overview">
+            <h3 class="project-title"><span class="project-icon">📄</span> AI-Based Resume Screening</h3>
+            <p class="project-desc">An NLP-driven candidate ranking system that automatically shortlists applicants based on job description relevance using text similarity modeling.</p>
+            <div class="project-tags">
+              <span class="tag tag-green">NLP</span>
+              <span class="tag tag-orange">Machine Learning</span>
+              <span class="tag tag-blue">TF-IDF</span>
+              <span class="tag tag-teal">NLTK</span>
+            </div>
+            <button class="btn-see-more">See More ➔</button>
+          </div>
+          <div class="project-details">
+            <div class="case-study-grid">
+              <div class="case-block">
+                <h4><span class="case-icon">🎯</span> Business Problem</h4>
+                <p>HR teams waste significant time manually screening hundreds of resumes per role, introducing subjectivity and inconsistency. The goal was to automate candidate shortlisting.</p>
+              </div>
+              <div class="case-block">
+                <h4><span class="case-icon">🗄️</span> Data</h4>
+                <ul>
+                  <li><strong>Input:</strong> Unstructured resumes (PDF, DOCX)</li>
+                  <li><strong>Reference:</strong> Job description text</li>
+                  <li><strong>Challenge:</strong> Formatting, noise, stopwords, morphology</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h4><span class="case-icon">🔬</span> Methodology</h4>
+                <div class="flow-steps">
+                  <div class="flow-step">Extract</div><div class="flow-arrow">→</div><div class="flow-step">Preprocess</div><div class="flow-arrow">→</div><div class="flow-step">TF-IDF</div><div class="flow-arrow">→</div><div class="flow-step">Rank</div>
+                </div>
+                <ul>
+                  <li>Resume text extraction with pdfplumber</li>
+                  <li>NLP pipeline: noise removal, stopword filtering, lemmatization</li>
+                  <li>TF-IDF vectorization transforms text into weighted features</li>
+                  <li>Cosine similarity scores each resume against job description</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h4><span class="case-icon">🛠️</span> Tools</h4>
+                <div class="tools-list">
+                  <span class="tool-badge">Python</span><span class="tool-badge">NLTK</span><span class="tool-badge">Scikit-Learn</span><span class="tool-badge">TF-IDF</span><span class="tool-badge">pdfplumber</span>
+                </div>
+              </div>
+              <div class="case-block impact-block">
+                <h4><span class="case-icon">📊</span> Business Impact</h4>
+                <div class="impact-metrics">
+                  <div class="metric"><span class="metric-num">85–90%</span><span class="metric-desc">HR alignment</span></div>
+                  <div class="metric"><span class="metric-num">70%+</span><span class="metric-desc">Effort reduction</span></div>
+                  <div class="metric"><span class="metric-num">Objective</span><span class="metric-desc">Bias-free scoring</span></div>
+                </div>
+                <p class="impact-note">Enables HR teams to focus evaluation time on shortlisted top candidates, reducing time-to-hire and improving candidate quality through reproducibility.</p>
+              </div>
+            </div>
+            <div class="project-links mt-3">
+              <a href="https://github.com/pranitarin05" target="_blank" class="project-link">View on GitHub</a>
+            </div>
+          </div>
+        </article>
 
       </div>
     </div>
   </section>
 
-  <!-- TRAINING -->
+  <!-- ─── TRAINING ───────────────────────────── -->
   <section id="training" class="training-section section-pad">
-    <div class="container reveal">
-      <div class="section-tag">Continuous Learning</div>
-      <h2 class="section-heading">Professional <span class="teal">Training</span></h2>
-      <p class="section-sub">Comprehensive corporate training programs completed.</p>
+    <div class="container">
+      <div class="section-label">/ Training</div>
+      <h2 class="section-title">Professional <span class="gradient-text">Training</span></h2>
+      <p class="section-sub">Intensive hands-on training that sharpened my problem-solving foundation.</p>
 
-      <div class="tr-project-card">
+      <!-- Project-style training card -->
+      <article class="tr-project-card">
         <div class="tr-card-header">
-          <h3 class="tr-card-title">Generative AI Development Program</h3>
-          <span class="tr-lang">#GenAI #ML</span>
+          <div class="tr-card-header-left">
+            <div class="project-tags">
+              <span class="tag tag-blue">Data Structures</span>
+              <span class="tag tag-purple">Algorithms</span>
+              <span class="tag tag-teal">C++</span>
+            </div>
+          </div>
+          <span class="project-date">Jun 2025</span>
         </div>
+
+        <h3 class="tr-card-title">Data Structures &amp; Algorithms <span class="tr-lang">using C++</span></h3>
+
         <div class="tr-card-meta">
           <div class="tr-provider">
-            <img src="https://www.google.com/s2/favicons?domain=cognizant.com&sz=32" alt="Cognizant logo" class="provider-favicon"> 
-            Cognizant | SkillNet 
+            <img src="https://www.google.com/s2/favicons?domain=cipherschools.com&sz=16" alt="CipherSchools" class="provider-favicon" />
+            CipherSchools &nbsp;&middot;&nbsp; Summer Intensive Training
           </div>
-          <span class="project-date">2024</span>
-          <a href="#" class="tr-cert-btn">
+          <a href="https://www.cipherschools.com/certificate/preview?id=687e55587efd6d5090703ee9"
+             target="_blank" class="project-link tr-cert-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             View Certificate
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
           </a>
         </div>
+
         <div class="tr-card-body">
           <div class="tr-desc-block">
-            <h4>Overview</h4>
-            <p>An intensive, hands-on corporate training program focused on building applied Generative AI solutions and large-scale language model integrations using cutting-edge enterprise frameworks.</p>
+            <h4><span class="case-icon">📋</span> About the Training</h4>
+            <p>Completed an intensive summer training programme focused on core Data Structures and Algorithms — building a strong foundation in problem-solving and logical thinking through hands-on C++ coding exercises.</p>
           </div>
           <div class="tr-topics-block">
-            <h4>Key Areas Covered</h4>
-            <div class="ts-tags">
-              <span class="tag tag-blue">Prompt Engineering</span>
-              <span class="tag tag-purple">RAG Pipelines</span>
-              <span class="tag tag-teal">LangChain</span>
-              <span class="tag tag-green">LlamaIndex</span>
-              <span class="tag tag-orange">Vector DBs</span>
+            <h4><span class="case-icon">📌</span> Topics Covered</h4>
+            <div class="tools-list">
+              <span class="tool-badge">Arrays &amp; Strings</span>
+              <span class="tool-badge">Linked Lists</span>
+              <span class="tool-badge">Stacks &amp; Queues</span>
+              <span class="tool-badge">Trees &amp; Graphs</span>
+              <span class="tool-badge">Recursion</span>
+              <span class="tool-badge">Sorting &amp; Searching</span>
+              <span class="tool-badge">Dynamic Programming</span>
             </div>
           </div>
         </div>
-      </div>
+      </article>
+
     </div>
   </section>
 
-  <!-- CERTIFICATIONS -->
-  <section id="certs" class="cert-section section-pad">
-    <div class="container reveal">
-      <div class="section-tag">Validation</div>
-      <h2 class="section-heading">Verified <span class="teal">Certifications</span></h2>
-      
+  <!-- ─── CERTIFICATIONS ────────────────────── -->
+  <section id="certifications" class="cert-section section-pad">
+    <div class="container">
+      <div class="section-label">/ Certifications</div>
+      <h2 class="section-title">Verified <span class="gradient-text">Certifications</span></h2>
+      <p class="section-sub">Industry-recognised certifications from NPTEL, Udemy, and Infosys Springboard.</p>
+
       <div class="cert-cards-grid">
+
+        <!-- NPTEL -->
         <div class="cert-item-card">
           <div class="cert-item-top">
             <div class="cert-company-logo">
-              <img src="https://www.google.com/s2/favicons?domain=nptel.ac.in&sz=64" alt="NPTEL">
+              <img src="https://www.google.com/s2/favicons?domain=nptel.ac.in&sz=32" alt="NPTEL logo" />
             </div>
             <div class="cert-item-info">
-              <h4 class="cert-item-title">Data Base Management System</h4>
-              <span class="cert-item-issuer">NPTEL</span>
+              <h4 class="cert-item-title">Privacy &amp; Security in Online Social Media</h4>
+              <p class="cert-item-issuer">NPTEL — IIT Madras</p>
             </div>
           </div>
           <div class="cert-item-footer">
-            <span class="cert-item-date">Completed</span>
-            <a href="#" class="cert-item-btn">Verify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+            <span class="cert-item-date">Apr 2025</span>
+            <a href="https://drive.google.com/file/d/1ELvBkcFXib5zBqv5GnS76AIR4Tbv7ZPa/view?usp=drive_link"
+               target="_blank" class="cert-item-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              View
+            </a>
           </div>
         </div>
 
+        <!-- Udemy -->
         <div class="cert-item-card">
           <div class="cert-item-top">
             <div class="cert-company-logo">
-              <img src="https://www.google.com/s2/favicons?domain=infosys.com&sz=64" alt="Infosys">
+              <img src="https://www.google.com/s2/favicons?domain=udemy.com&sz=32" alt="Udemy logo" />
             </div>
             <div class="cert-item-info">
-              <h4 class="cert-item-title">Overview of Artificial Intelligence</h4>
-              <span class="cert-item-issuer">Infosys Springboard</span>
+              <h4 class="cert-item-title">Build Generative AI Apps Using No-Code Tools</h4>
+              <p class="cert-item-issuer">Udemy</p>
             </div>
           </div>
           <div class="cert-item-footer">
-            <span class="cert-item-date">Completed</span>
-            <a href="#" class="cert-item-btn">Verify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+            <span class="cert-item-date">Aug 2025</span>
+            <a href="https://drive.google.com/file/d/1_Ck6A8kzw5StFXoB6HrPsrkkNPsiszKU/view?usp=drive_link"
+               target="_blank" class="cert-item-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              View
+            </a>
           </div>
         </div>
 
+        <!-- Infosys -->
         <div class="cert-item-card">
           <div class="cert-item-top">
             <div class="cert-company-logo">
-              <img src="https://www.google.com/s2/favicons?domain=udemy.com&sz=64" alt="Udemy">
+              <img src="https://www.google.com/s2/favicons?domain=infosys.com&sz=32" alt="Infosys logo" />
             </div>
             <div class="cert-item-info">
-              <h4 class="cert-item-title">SQL (Basic to Advance)</h4>
-              <span class="cert-item-issuer">Udemy</span>
+              <h4 class="cert-item-title">ChatGPT-4 Prompt Engineering: Generative AI &amp; LLM</h4>
+              <p class="cert-item-issuer">Infosys Springboard</p>
             </div>
           </div>
           <div class="cert-item-footer">
-            <span class="cert-item-date">Completed</span>
-            <a href="#" class="cert-item-btn">Verify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+            <span class="cert-item-date">Sep 2025</span>
+            <a href="https://drive.google.com/file/d/1_Ck6A8kzw5StFXoB6HrPsrkkNPsiszKU/view?usp=drive_link"
+               target="_blank" class="cert-item-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              View
+            </a>
           </div>
         </div>
 
-        <div class="cert-item-card">
-          <div class="cert-item-top">
-            <div class="cert-company-logo">
-              <img src="https://www.google.com/s2/favicons?domain=udemy.com&sz=64" alt="Udemy">
-            </div>
-            <div class="cert-item-info">
-              <h4 class="cert-item-title">Python Bootcamp</h4>
-              <span class="cert-item-issuer">Udemy</span>
-            </div>
-          </div>
-          <div class="cert-item-footer">
-            <span class="cert-item-date">Completed</span>
-            <a href="#" class="cert-item-btn">Verify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- EDUCATION -->
+  <!-- ─── EDUCATION ──────────────────────────── -->
   <section id="education" class="education-section section-pad">
-    <div class="container reveal">
-      <div class="section-tag">Academic Background</div>
-      <h2 class="section-heading">My <span class="teal">Education</span></h2>
-      
+    <div class="container">
+      <div class="section-label">/ Education</div>
+      <h2 class="section-title">Academic <span class="gradient-text">Background</span></h2>
+      <p class="section-sub">My foundational learning journey and academic qualifications.</p>
+
       <div class="edu-grid">
-        <!-- Degree -->
+
+        <!-- Card 1: LPU -->
         <div class="edu-card">
           <div class="edu-card-top">
-            <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+            <div class="edu-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3.33 2 8.67 2 12 0v-5"/>
+              </svg>
+            </div>
             <div class="edu-card-header">
-              <h4 class="edu-inst">Gandhi Institute of Excellent Technocrats</h4>
-              <span class="edu-address"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Bhubaneswar</span>
+              <h3 class="edu-inst">Lovely Professional University</h3>
+              <div class="edu-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+                Phagwara, Punjab, India — 144411
+              </div>
             </div>
           </div>
-          <div>
-            <span class="edu-badge">B.Tech in CSE</span>
-            <p class="edu-degree mt-2">Computer Science and Engineering</p>
-          </div>
+          <div class="edu-badge">Aug 2023 — Present</div>
+          <div class="edu-degree">Bachelor of Technology — Computer Science &amp; Engineering</div>
           <div class="edu-result">
             <span class="result-label">CGPA</span>
-            <span class="result-value">8.9</span>
+            <span class="result-value">6.55 / 10</span>
           </div>
           <div class="edu-card-footer">
-            <span class="edu-status edu-status-active">2021 — 2025</span>
+            <span class="edu-status edu-status-active">🟢 In Progress</span>
           </div>
         </div>
 
-        <!-- Metric -->
+        <!-- Card 2: Ravenshaw HSS -->
         <div class="edu-card">
           <div class="edu-card-top">
-            <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div class="edu-icon edu-icon-hs">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="7" width="20" height="14" rx="2"/>
+                <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/>
+                <line x1="12" y1="12" x2="12" y2="16"/>
+                <line x1="10" y1="14" x2="14" y2="14"/>
+              </svg>
+            </div>
             <div class="edu-card-header">
-              <h4 class="edu-inst">Bhubaneswar College of Computer Science</h4>
-              <span class="edu-address"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Bhubaneswar</span>
+              <h3 class="edu-inst">Ravenshaw Higher Secondary School</h3>
+              <div class="edu-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+                Cuttack, Odisha, India — 753003
+              </div>
             </div>
           </div>
-          <div>
-            <span class="edu-badge edu-badge-done">12th Standard</span>
-            <p class="edu-degree mt-2">Higher Secondary (Science)</p>
-          </div>
+          <div class="edu-badge edu-badge-done">Completed 2022</div>
+          <div class="edu-degree">Intermediate (Class XII)</div>
           <div class="edu-result">
             <span class="result-label">Percentage</span>
-            <span class="result-value">71%</span>
+            <span class="result-value">63.2%</span>
           </div>
           <div class="edu-card-footer">
-            <span class="edu-status edu-status-done">Completed - 2021</span>
+            <span class="edu-status edu-status-done">✅ Completed</span>
           </div>
         </div>
+
+        <!-- Card 3: Secondary School -->
+        <div class="edu-card">
+          <div class="edu-card-top">
+            <div class="edu-icon edu-icon-mat">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <div class="edu-card-header">
+              <h3 class="edu-inst">Board High School</h3>
+              <div class="edu-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+                Cuttack, Odisha, India — 753003
+              </div>
+            </div>
+          </div>
+          <div class="edu-badge edu-badge-done">Completed 2020</div>
+          <div class="edu-degree">Matriculation (Class X)</div>
+          <div class="edu-result">
+            <span class="result-label">Percentage</span>
+            <span class="result-value">84.0%</span>
+          </div>
+          <div class="edu-card-footer">
+            <span class="edu-status edu-status-done">✅ Completed</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- RESUME -->
-  <section class="resume-section section-pad-sm">
-    <div class="container reveal">
+  <!-- ─── RESUME ─────────────────────────────────── -->
+  <section id="resume" class="resume-section section-pad">
+    <div class="container">
+      <div class="section-label">/ Resume</div>
+      <h2 class="section-title">My <span class="gradient-text">Resume</span></h2>
       <div class="resume-card">
         <div class="resume-card-left">
           <div class="resume-icon">📄</div>
           <div>
-            <h3>Want the full picture?</h3>
-            <p>Download my comprehensive resume outlining all frameworks, projects, and contact info.</p>
+            <h3>Pranit Gourav Sahoo</h3>
+            <p>Data Analyst · ML · Backend Developer</p>
             <ul class="resume-highlights">
-              <li>Up-to-date with latest tech stack</li>
-              <li>Ready for printing (clean PDF)</li>
-              <li>Direct links to active repositories</li>
+              <li>B.Tech – Computer Science &amp; Engineering, LPU (CGPA: 6.55)</li>
+              <li>Python · SQL · Power BI · Machine Learning · NLP</li>
+              <li>Certified: NPTEL, Infosys, Udemy</li>
+              <li>Hackathon: Top 50% of 250+ participants</li>
             </ul>
           </div>
         </div>
         <div class="resume-card-right">
-          <a href="pranit full cv.pdf" download class="btn btn-primary">
-            Download Detailed CV
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          <a href="pranit perfect cv.pdf" download class="btn btn-primary btn-large">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download Resume (PDF)
           </a>
-          <span class="resume-note">PDF Format (~200KB)</span>
+          <p class="resume-note">PDF format · Updated March 2026</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact-section section-pad">
-    <div class="container contact-inner reveal">
-      <div class="contact-left">
-        <div class="section-tag">Let's Talk</div>
-        <h2 class="section-heading">Got a project in <span class="teal">mind?</span></h2>
-        <p class="contact-left-sub">Looking for an experienced developer to bring your idea to life? Let's connect and discuss how I can help your team succeed.</p>
-        
-        <div class="contact-info-row">
-          <a href="mailto:pranitgouravsahoo@gmail.com" class="contact-info-item">
-            <div class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zM22 6l-10 7L2 6"></path></svg></div>
-            <div>
-              <span class="contact-info-label">Email Me</span>
-              <span class="contact-info-value">pranitgouravsahoo@gmail.com</span>
-            </div>
-          </a>
-          <div class="contact-info-item">
-            <div class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-            <div>
-              <span class="contact-info-label">Call Me</span>
-              <span class="contact-info-value">+91 7978255959</span>
-            </div>
+  <!-- ─── CONTACT ────────────────────────────────── -->
+  <section id="contact" class="contact section-pad">
+    <div class="container">
+      <div class="section-label">/ Contact</div>
+      <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+      <p class="section-sub">Open to data analyst roles, freelance projects, and analytical collaborations. Get in touch.</p>
+      <div class="contact-grid">
+        <a href="mailto:pranitgourav05@gmail.com" class="contact-card" id="contact-email">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M2 7l10 7 10-7"/>
+            </svg>
           </div>
-        </div>
+          <div class="contact-info">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">pranitgourav05@gmail.com</span>
+          </div>
+          <div class="contact-arrow">→</div>
+        </a>
+        <a href="http://www.linkedin.com/in/pranit-gourav" target="_blank" class="contact-card" id="contact-linkedin">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">pranit-gourav</span>
+          </div>
+          <div class="contact-arrow">→</div>
+        </a>
+        <a href="https://github.com/pranitarin05" target="_blank" class="contact-card" id="contact-github">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.41 1.02.01 2.04.14 3 .41 2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">pranitarin05</span>
+          </div>
+          <div class="contact-arrow">→</div>
+        </a>
       </div>
-      
-      <div class="contact-form-card">
-        <h3>Send a message ✨</h3>
-        <p>I usually respond within 24 hours.</p>
-        <form>
-          <div class="form-group-row">
-            <div class="form-group">
-              <label>Your Name</label>
-              <input type="text" placeholder="John Doe" required>
-            </div>
-            <div class="form-group">
-              <label>Your Email</label>
-              <input type="email" placeholder="john@example.com" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Message</label>
-            <textarea placeholder="Tell me about your project..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%;">
-            Send Message 
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          </button>
-        </form>
+      <div class="contact-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.05 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9a16 16 0 006 6l1.18-1.18a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        <span>+91 70776 19008</span>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ─── FOOTER ─────────────────────────────────── -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-nav">
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="footer-socials">
-        <a href="https://github.com/pranitarin05" class="footer-social"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.087-.744.084-.73.084-.73 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.627-5.373-12-12-12"/></svg></a>
-        <a href="https://linkedin.com/in/pranit-gourav-sahoo-b61516244" class="footer-social"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2.01 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zM20.45 20.45h-3.56v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96v5.7H9.31V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z"/></svg></a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span class="footer-copy">© 2026 Pranit Gourav Sahoo. Designed with SaulDesign PRD.</span>
+    <div class="container">
+      <p>© 2026 Pranit Gourav Sahoo · Built with purpose, powered by data.</p>
       <div class="footer-links">
-        <a href="#">Terms</a>
-        <a href="#">Privacy</a>
+        <a href="mailto:pranitgourav05@gmail.com">Email</a>
+        <a href="http://www.linkedin.com/in/pranit-gourav" target="_blank">LinkedIn</a>
+        <a href="https://github.com/pranitarin05" target="_blank">GitHub</a>
       </div>
     </div>
   </footer>
